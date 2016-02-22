@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript Refresher</title>
+    </head>
+<body>
+    
+Enter name: <input id="nameField" type="text">
+<button id="helloBtn" >Say Hello</button>
+<p id="helloField"></p>
+
+<script>
+    
+// ** Variables
+var name = "Habbes";
+var age = 18;
+
+// ** DOM Manipulation
+var btn = document.getElementById("helloBtn");
+var nameField = document.getElementById("nameField");
+
+// ** Functions
+function sayHello(name){
+    var p = document.getElementById("helloField");
+    p.textContent = "Hello, " + name;
+}
+
+// ** Event handling
+btn.onclick = function(){
+    // retrieve the value from the input element
+    var name = nameField.value;
+    
+    sayHello(name);  
+}
+
+// ** Arrays
+var students = ['Brian', 'Cindy', 'James', 'Sam'];
+
+// get element in an array
+var brian = students[0];
+    
+// get the number of elements in array
+console.log(students.length);
+// Adding an element to an array
+students.push("Kevin");
+
+// iterating through elements of an array
+students.forEach(function(student){
+    console.log(student);
+});
+
+// ** Objects
+var person = { name: 'Abby', course: 'BBIT', eyeColor: 'black', age: 19};
+
+console.log(person.name);
+console.log(person.course);
+console.log(person.eyeColor);
+
+// changing the value of property
+person.eyeColor = "green";
+
+// adding a property to an object
+person.favDish = "Pizza";
+
+console.log(person);
+    
+</script>
+    
+    
+</body>
+</html>
